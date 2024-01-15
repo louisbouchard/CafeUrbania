@@ -1,0 +1,135 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Sections
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <Image Source="images/banner/banner-cake.png" />
+        </div>
+        <div class="carousel-item">
+            <Image Source="images/banner/banner-whip.png" />
+        </div>
+        <div class="carousel-item">
+            <Image Source="images/banner/banner-macaroons.png" />
+        </div>
+        <div class="carousel-item">
+            <Image Source="images/banner/redvelvet.jpg" />
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container">
+    <h1 class="my-4">Bienvenue chez Café Urbania.</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="images/menu/mocha.png" />
+                <div class="card-body">
+                    <h2 class="card-title">Café</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <NavLink href="Order" class="btn btn-info float-end">Menu café</NavLink>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="images/menu/crepe-sweet.png" />
+                <div class="card-body">
+                    <h2 class="card-title">Carbs</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <NavLink href="Order?ActiveTab=food" class="btn btn-info float-end">Menu mets cuisinés</NavLink>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="images/marketing/table.png" />
+                <div class="card-body">
+                    <h2 class="card-title">Communauté caféinée</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <NavLink href="Contact" class="btn btn-info float-end">Soyez impliqué</NavLink>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mb-4">
+            <div class="card mb-4">
+                <div class="row no-gutters">
+                    <div class="col-sm-3">
+                        <img class="card-img" src="images/marketing/download-small.png" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="card-body">
+                            <h3 class="card-title">Restons branchés partout pour vous</h3>
+                            <p>Télécharger notre application mobile pour plus de rapidité et profiter des promotions éphémères.</p>
+                            <ul>
+                                <li>Coupons et promotions</li>
+                                <li>Club des caféinés et ses avantages</li>
+                                <li>Localisation de restaurants</li>
+                                <li>Les dernières nouveautés dans les menus</li>
+                                <li>Collations exclusives</li>
+                                <li>Rappels variés</li>
+                                <li>Connections avec la communauté</li>
+                            </ul>
+                            <p>Disponible sur tous les play store. La disponibilité peut varier selon la région.</p>
+                            <a href="#" class="btn btn-info float-end">Télécharger maintenant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-sm-3">
+                        <img style="width:100%" src="images/marketing/placeholder.png" />
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="card-body">
+                            <h2>Contactez-nous</h2>
+                            <p>Questions ou commentaires à propos de tout? Le service sera meilleur.</p>
+                            <p>Téléphone: 450-975-6100</p>
+                            <p>Heures d'affaire:</p>
+                            <ul>
+                                <li>Lun-Vend: 6H - 21H</li>
+                                <li>Samedi: 7H - 21H</li>
+                                <li>Dimanche: 7H - 17H</li>
+                            </ul>
+                            <NavLink href="Contact" class="btn btn-info float-end">Je veux m'inscrire</NavLink>
+                            <div class="clearfix" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2>Spécial du printemps!</h2>
+                    <p>Le printemps arrive - célébrez son arrivée avec 25% de réduction sur nos cupcakes signature.</p>
+                    <NavLink href="Order" class="btn btn-info float-end mb-3">Obtenir la promotion!</NavLink>
+                    <img src="images/marketing/cupcake-sign.png" class="sign" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+</div>

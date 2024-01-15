@@ -1,0 +1,51 @@
+﻿@using CafeUrbania.Models.Services;
+@inject NavigationManager NavManager
+@inject IContactService ContactService
+@rendermode InteractiveServer
+
+<h1>Contactez-nous</h1>
+<p>Nous aimons recevoir de vos nouvelles! Nous faisons de notre mieux pour répondre dans les 24 heures.</p>
+
+@if (HasContacted)
+{
+    <div class="alert alert-success">Merci @Contact.Name de avoir écrit! Nous vous répondons sous peu.</div>
+}
+<hr />
+
+<EditForm Model="@Contact" method="post" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <Microsoft.AspNetCore.Components.Forms.ValidationSummary />
+    <div class="mb-3">
+        <label class="form-label" for="name">Nom: </label>
+        <InputText id="Name" class="form-control" @bind-Value="@Contact.Name" placeholder="Entrez votre nom"></InputText>
+        <ValidationMessage For="@(() => Contact.Name)" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="email">Adresse électronique: </label>
+        <InputText id="email" class="form-control" @bind-Value="@Contact.Email" placeholder="Entrez votre courriel dans un format valide"></InputText>
+        <ValidationMessage For="@(() => Contact.Email)" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="email">Téléphone: </label>
+        <InputText id="phone" class="form-control" @bind-Value="@Contact.Phone" placeholder="Entrez votre téléphone selon le format 9999999999"></InputText>
+        <ValidationMessage For="@(() => Contact.Phone)" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="message">Message: </label>
+        <InputTextArea id="message" class="form-control" @bind-Value="@Contact.Message" placeholder="Entrez votre message"></InputTextArea>
+        <ValidationMessage For="@(() => Contact.Message)" />
+    </div>
+    <button type="submit" class="btn btn-info float-end">Envoyer</button>
+</EditForm>
+
+@code {
+    public Contact Contact { get; set; } = new Contact();
+
+    public bool HasContacted = false;
+
+    private async void HandleValidSubmit()
+    {
+        HasContacted = true;
+        Contact = new();
+    }
+}

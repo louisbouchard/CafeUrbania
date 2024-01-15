@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Components.QuickGrid
+@namespace CafeUrbania.UI.Admin
+
+@if (Orders == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div>
+        <h2>Historique des commandes</h2>
+        <hr />
+        <div class="order-history">
+            <div class="grid">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th># Comm.</th>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Notes</th>
+                            <th>Création</th>
+                            <th>Code Promo</th>
+                            <th>Nb d'items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Orders)
+                        {
+                            <tr>
+                                <td>@item.OrderNumber</td>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                <td>@item.Notes</td>
+                                <td>@item.Created</td>
+                                <td>@item.PromoCode</td>
+                                <td>@item.Items.Count</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}

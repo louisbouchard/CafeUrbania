@@ -1,0 +1,44 @@
+﻿@using System.ComponentModel.DataAnnotations;
+@rendermode InteractiveServer
+
+<div>
+    <h2 class="mailing-header">Gardons contact</h2>
+    @if (Subscribed)
+    {
+        <div class="alert alert-success">Merci, @Info.Name pour votre inscription! Des économies à profusion sont en route vers votre boîte courriel sous forme de codes promotionnels.</div>
+    }
+    else
+    {
+        <p class="mailing-subheader">Abonnez-vous à notre list d'envois - sans spam, c'est assuré.</p>
+        <EditForm Model="@Info" method="post" OnValidSubmit="@HandleSubscribe">
+            <DataAnnotationsValidator />
+            <Microsoft.AspNetCore.Components.Forms.ValidationSummary />
+            <div class="mb-3">
+                <InputText id="email" class="form-control" @bind-Value="@Info.Email" placeholder="Entrez votre adresse courriel"></InputText>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-info float-end">Envoyer</button>
+            </div>
+        </EditForm>
+        <div class="clearfix" />
+    }
+</div>
+
+@code {
+    public bool Subscribed { get; set; } = false;
+
+    public MailingInfo Info { get; set; } = new MailingInfo();
+
+    private async void HandleSubscribe()
+    {
+        // Code to subscribe them
+        Subscribed = true;
+    }
+
+    public class MailingInfo
+    {
+        [Required]
+        public string Email { get; set; }
+        public string Name { get; set; }
+    }
+}

@@ -1,0 +1,6 @@
+@CafeUrbania.MinApi_HostAddress = http://localhost:5037
+
+GET {{CafeUrbania.MinApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
