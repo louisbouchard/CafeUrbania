@@ -38,14 +38,3 @@
     <button type="submit" class="btn btn-info float-end">Envoyer</button>
 </EditForm>
 
-@code {
-    public Contact Contact { get; set; } = new Contact();
-
-    public bool HasContacted = false;
-
-    private async void HandleValidSubmit()
-    {
-        HasContacted = true;
-        Contact = new();
-    }
-}
