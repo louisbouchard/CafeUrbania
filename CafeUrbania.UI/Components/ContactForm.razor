@@ -8,7 +8,7 @@
 
 @if (HasContacted)
 {
-    <div class="alert alert-success">Merci @Contact.Name de avoir écrit! Nous vous répondons sous peu.</div>
+    <div class="alert alert-success">Merci @Contact.Nom de avoir écrit! Nous vous répondons sous peu.</div>
 }
 <hr />
 
@@ -17,18 +17,18 @@
     <Microsoft.AspNetCore.Components.Forms.ValidationSummary />
     <div class="mb-3">
         <label class="form-label" for="name">Nom: </label>
-        <InputText id="Name" class="form-control" @bind-Value="@Contact.Name" placeholder="Entrez votre nom"></InputText>
-        <ValidationMessage For="@(() => Contact.Name)" />
+        <InputText id="Nom" class="form-control" @bind-Value="@Contact.Nom" placeholder="Entrez votre nom"></InputText>
+        <ValidationMessage For="@(() => Contact.Nom)" />
     </div>
     <div class="mb-3">
         <label class="form-label" for="email">Adresse électronique: </label>
-        <InputText id="email" class="form-control" @bind-Value="@Contact.Email" placeholder="Entrez votre courriel dans un format valide"></InputText>
-        <ValidationMessage For="@(() => Contact.Email)" />
+        <InputText id="Courriel" class="form-control" @bind-Value="@Contact.Courriel" placeholder="Entrez votre courriel dans un format valide"></InputText>
+        <ValidationMessage For="@(() => Contact.Courriel)" />
     </div>
     <div class="mb-3">
         <label class="form-label" for="email">Téléphone: </label>
-        <InputText id="phone" class="form-control" @bind-Value="@Contact.Phone" placeholder="Entrez votre téléphone selon le format 9999999999"></InputText>
-        <ValidationMessage For="@(() => Contact.Phone)" />
+        <InputText id="Telephone" class="form-control" @bind-Value="@Contact.Telephone" placeholder="Entrez votre téléphone selon le format 9999999999"></InputText>
+        <ValidationMessage For="@(() => Contact.Telephone)" />
     </div>
     <div class="mb-3">
         <label class="form-label" for="message">Message: </label>

@@ -35,7 +35,7 @@ app.MapGet("/orders/{id}", (IOrderService orderService, int id) =>
 
 app.MapPost("/contact", (Contact contact) =>
 {
-    contact.SubmittedTime = DateTime.Now;
+    contact.DateHeureCreation = DateTime.Now;
 
     return contact;
 });
