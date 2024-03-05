@@ -9,10 +9,8 @@ public class Contact
 
     public string Telephone { get; set; }
 
-    [Required]
     public string Courriel { get; set; }
 
-    [Required]
     public string Message { get; set; }
 
     public DateTime DateHeureCreation { get; set; }
