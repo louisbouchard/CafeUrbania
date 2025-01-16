@@ -13,7 +13,7 @@ builder.Services.AddBlazorise()
   .AddFontAwesomeIcons();
 
 builder.Services.AddHttpClient();
-builder.Services.AddHttpClient<IMenuService, MenuService>(client =>
+builder.Services.AddHttpClient<IMenuPopulaireService, MenuPopulaireService>(client =>
     client.BaseAddress = new Uri("https://localhost:7110/"));
 builder.Services.AddHttpClient<IContactService, ContactService>(client =>
     client.BaseAddress = new Uri("https://localhost:7110/"));

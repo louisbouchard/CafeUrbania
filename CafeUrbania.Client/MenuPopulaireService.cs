@@ -2,11 +2,11 @@
 
 namespace CafeUrbania.Models.Services;
 
-public class MenuService : IMenuService
+public class MenuPopulaireService : IMenuPopulaireService
 {
     private readonly HttpClient http;
 
-    public MenuService(HttpClient http)
+    public MenuPopulaireService(HttpClient http)
     {
         this.http = http;
     }

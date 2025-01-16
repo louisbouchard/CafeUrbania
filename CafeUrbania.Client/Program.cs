@@ -10,7 +10,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 // Pointer sur l'API
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7110/") });
-builder.Services.AddScoped<IMenuService, MenuService>();
+builder.Services.AddScoped<IMenuPopulaireService, MenuPopulaireService>();
 
 builder.Services.AddBlazorise()
   .AddBootstrapProviders()

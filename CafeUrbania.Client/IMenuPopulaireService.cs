@@ -1,6 +1,6 @@
 ﻿namespace CafeUrbania.Models.Services;
 
-public interface IMenuService
+public interface IMenuPopulaireService
 {
     Task<List<MenuItem>> GetMenuItems();
 

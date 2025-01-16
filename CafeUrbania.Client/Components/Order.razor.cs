@@ -7,7 +7,7 @@ namespace CafeUrbania.Client.Components;
 public partial class Order
 {
     [Inject]
-    public IMenuService MenuService { get; set; }
+    public IMenuPopulaireService MenuPopulaireService { get; set; }
 
     [Inject]
     public NavigationManager NavManager { get; set; }
@@ -29,7 +29,7 @@ public partial class Order
 
     protected override async Task OnInitializedAsync()
     {
-        MenuItems = await MenuService.GetMenuItems();
+        MenuItems = await MenuPopulaireService.GetMenuItems();
     }
 
     public void FilterMenu()
