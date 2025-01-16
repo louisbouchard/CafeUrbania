@@ -14,7 +14,7 @@ public class OrderService : IOrderService
             new Order
             {
                 Id = 1,
-                Notes = "Commande de café",
+                Notes = "Cette cliente ne connait pas le mot p_o_u_r_b_o_i_r_e",
                 LastName = "Lavoie",
                 FirstName = "Claire",
                 PromoCode = "BoitsansSoif",
@@ -47,7 +47,7 @@ public class OrderService : IOrderService
             new Order
             {
                 Id = 2,
-                Notes = "Commande de mets",
+                Notes = "Client tête de erreur 403",
                 Created = DateTime.Now,
                 OrderNumber = 125,
                 LastName = "Deschamps",
@@ -89,7 +89,7 @@ public class OrderService : IOrderService
             new Order
             {
                 Id = 3,
-                Notes = "Une petite commande",
+                Notes = "Attention type FruitCake",
                 PromoCode = "addict",
                 LastName = "Malboeuf",
                 FirstName = "Annie",
@@ -111,7 +111,7 @@ public class OrderService : IOrderService
             new Order
             {
                 Id = 4,
-                Notes = "Une commande pour le voisin",
+                Notes = "Il semble porter son nom",
                 Created = DateTime.Now,
                 OrderNumber = 155,
                 LastName = "Gringras",
@@ -143,7 +143,7 @@ public class OrderService : IOrderService
             new Order
             {
                 Id = 4,
-                Notes = "Une commande pour un employé",
+                Notes = "À traiter avec des gants blancs de différentes longueurs",
                 Created = DateTime.Now,
                 OrderNumber = 180,
                 LastName = "Laporte",
@@ -184,7 +184,7 @@ public class OrderService : IOrderService
             new Order
             {
                 Id = 6,
-                Notes = "Une commande pour une corporation",
+                Notes = "Même en face-à-face lui parler au téléphone",
                 Created = DateTime.Now.AddDays(-10).AddHours(5),
                 OrderNumber = 190,
                 LastName = "Boucher",
